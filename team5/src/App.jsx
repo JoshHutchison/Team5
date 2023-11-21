@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Main from './components/Main'
 import DataContext from './Context'
+import Authentication from './components/Login/Authentication'
+import Profile from './components/Login/Profile'
+
 
 
 
@@ -17,7 +20,8 @@ function App() {
 
   return (
     <>
-
+  <Profile/>
+  <Authentication/>
       <DataContext.Provider value={{ ticketInfo, setTicketInfo }}>
         <Main></Main>
       </DataContext.Provider>
