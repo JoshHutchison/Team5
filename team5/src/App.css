@@ -1,8 +1,23 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  width:98vw;
+}
+
+
+.mb-3 {
+  display:flex;
+  margin: 20px;
+  
+  
+  
 }
 
 .logo {
@@ -133,5 +148,6 @@
  .home-screen-btn {
   margin: 5px;
  }
+
 
 
