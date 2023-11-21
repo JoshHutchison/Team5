@@ -150,6 +150,9 @@
 }
 /* end of header.css */
 
+.waitlistContainer{
+  margin-top: 100px;
+}
 
 .mb-3 {
   display:flex;
