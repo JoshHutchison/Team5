@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Home from './Home'
+import AddTicket from './AddTicket'
 
 
 const Main = () => {
@@ -19,7 +20,7 @@ const Main = () => {
                <Route path='/' element={<Home userData={userData} setUserData={setUserData}/>}/>
                {/* <Route path='/addticket' element={<AddTicket userData={userData} setUserData={setUserData} />}/>  
                <Route path='/waitlist' element={<WaitList userData={userData} setUserData={setUserData} />}/>   */}
-            
+               <Route path='/addticket' element={<AddTicket userData={userData} setUserData={setUserData} />}/>
                
    
            </Routes>
