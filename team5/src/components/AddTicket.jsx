@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form';
 import FormText from 'react-bootstrap/esm/FormText';
 import Header from './Header';
 
-function AddTicket() {
+
+function AddTicket(props) {
   return (
     <>
     <Header/>
