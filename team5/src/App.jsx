@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Main from './components/Main'
+import Waitlist from './components/Waitlist'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <>
 
   
-        <Main></Main>
+        {/* <Main></Main> */}
+        <Waitlist />
 
     </>
   )
