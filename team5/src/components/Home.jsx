@@ -21,7 +21,7 @@ const Home = (props) => {
 
       <div className="add-ticket-btn home-screen-btn">
       <Link className="add-ticket-btn-link" to='/addticket'>    
-        <Button block color="primary" onClick={() => props.setUserData({date:date})}>
+        <Button className="btn" block  onClick={() => props.setUserData({date:date})}>
           Add Ticket
         </Button>
         </Link>
@@ -29,7 +29,7 @@ const Home = (props) => {
 
       <div className="view-waitlist home-screen-btn">
         <Link className="wait-list-btn-link" to='/waitlist'>    
-            <Button block color="primary">
+            <Button className="btn" block  >
             View Waitlist
             </Button>
         </Link>

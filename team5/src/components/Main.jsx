@@ -2,9 +2,8 @@ import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Home from './Home'
 import AddTicket from './AddTicket'
-// import Header from './Header'
-import Waitlist from '../Waitlist'
-
+import Header from './Header'
+import Waitlist from './Waitlist'
 
 
 const Main = () => {
