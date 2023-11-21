@@ -11,6 +11,23 @@
   width:98vw;
 }
 
+/* header.css */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+/* end of header.css */
 
 .mb-3 {
   display:flex;

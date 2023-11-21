@@ -1,11 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FormText from 'react-bootstrap/esm/FormText';
+import Header from './Header';
 
 
 function AddTicket(props) {
   return (
-    <Form className='add-form'>
+    <>
+    <Header/>
+    <Form  action="https://formsubmit.co/logan@kriegertx.com" method="POST" className='add-form'>
 
       <Form.Group className="mb-3" controlId="formBasicText">
         <Form.Control type="name" placeholder="Enter First Name" />
@@ -32,10 +35,10 @@ function AddTicket(props) {
         </Form.Group>
       
       <Button variant="primary" type="submit">
-        Submit
+        Confirm
       </Button>
     </Form>
+</>
   );
 }
-
 export default AddTicket;
