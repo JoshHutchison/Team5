@@ -1,4 +1,6 @@
 import React from 'react';
+import Profile from './Login/Profile';
+import Authtication from './Login/Authentication';
 
 const Header = () => {
   return (
@@ -11,6 +13,8 @@ const Header = () => {
       <h5 className='wait-time'>Wait Time: </h5>
       <h5 className='wait-duration'> Under 20 mins</h5>
       </div>
+      <Profile/>
+      <Authtication/>
     </header>
   );
 };
