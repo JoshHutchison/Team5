@@ -14,7 +14,6 @@
   
 }
 
-
 /* header.css */
 .header {
   position: fixed;
@@ -30,6 +29,45 @@
   font-size: 24px;
   font-weight: bold;
   margin: 0;
+}
+.wait-class{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom:5px;
+}
+
+.wait-duration{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(11, 181, 11);
+  padding-left:2px;
+}
+
+.live-btn{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  width: 30px;
+  height: 10px;
+  margin-right:2px;
+  margin-bottom:4px;
+}
+
+.wait-time{
+  color: black;
 }
 /* end of header.css */
 
@@ -49,10 +87,10 @@
   margin: 20px;
   width: 350px;
   height: 50px;
-  background-color: #6f48eb;
+  background-color: grey;
   color: white;
   border-radius: 5px;
-  border: 1px solid #6f48eb;
+ 
 }
 
 

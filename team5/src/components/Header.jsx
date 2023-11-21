@@ -4,8 +4,12 @@ const Header = () => {
   return (
     <header>
       <h1>Mike Wazowski - Office Hours
-        Live Wait Time: Under 20 minutes
       </h1>
+      <div className='wait-class'>
+      <button className='live-btn'>Live</button>
+      <h5 className='wait-time'>Wait Time: </h5>
+      <h5 className='wait-duration'> Under 20 mins</h5>
+      </div>
     </header>
   );
 };
