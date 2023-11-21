@@ -7,34 +7,52 @@ import Header from "./Header";
 
 const Home = (props) => {
   const [date, setDate] = useState(new Date());
+
+  const isAvailableTime = (selectedDate) => {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const dayIndex = selectedDate.getDay()
+    if ( dayIndex == 0) {
+        return "12pm - 3pm"
+    } else if(dayIndex <= 4){
+        return "5pm - 8pm"
+    }else {
+        return "No After Hours Available"
+    }  
+  }
+
   return (
     <div className="Home">
-      <Header></Header>
+      <Header></Header>   
       
-      {/* <h1 className="text-center">React Calendar</h1> */}
       <div className="calendar-container">
         <Calendar onChange={setDate} value={date} />
       </div>
-      {/* <p className="text-center">
-        <span className="bold">Selected Date:</span> {date.toDateString()}
-      </p> */}
+      
+      <div className="availability-box">        
+        <p>
+          Available Time: {isAvailableTime(date)}          
+        </p>
+      </div>
 
       <div className="add-ticket-btn home-screen-btn">
-      <Link className="add-ticket-btn-link" to='/addticket'>    
-        <Button className="btn" block  onClick={() => props.setUserData({date:date})}>
-          Add Ticket
-        </Button>
+        <Link className="add-ticket-btn-link" to="/addticket">
+          <Button
+            className="btn"
+            block
+            onClick={() => props.setUserData({ date: date })}
+          >
+            Add Ticket
+          </Button>
         </Link>
       </div>
 
       <div className="view-waitlist home-screen-btn">
-        <Link className="wait-list-btn-link" to='/waitlist'>    
-            <Button className="btn" block  >
+        <Link className="wait-list-btn-link" to="/waitlist">
+          <Button className="btn" block>
             View Waitlist
-            </Button>
+          </Button>
         </Link>
       </div>
-
     </div>
   );
 };
