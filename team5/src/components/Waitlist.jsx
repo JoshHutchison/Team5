@@ -113,7 +113,7 @@ export default function Waitlist() {
                     marginTop: '30px',
                     border: '1px solid black',
                     borderRadius: '6px',
-                    backgroundColor: 'rgb(98, 98, 98)',
+                    backgroundColor: '#dc4141',
                     color: 'white'
                 }}
             >Cancel Ticket</button>
