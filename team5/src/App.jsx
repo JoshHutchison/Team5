@@ -21,10 +21,12 @@ function App() {
 
   return (
     <>
+      <div className="App">
   
       <DataContext.Provider value={{ ticketInfo, setTicketInfo }}>
         <Main/>
       </DataContext.Provider>
+      </div>
     </>
   )
 }
