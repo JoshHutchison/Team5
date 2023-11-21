@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form';
 import FormText from 'react-bootstrap/esm/FormText';
 import Header from './Header';
 
-function AddTicket() {
+
+function AddTicket(props) {
   return (
     <>
     <Header/>
@@ -33,7 +34,7 @@ function AddTicket() {
             </Form.Text>
         </Form.Group>
       
-      <Button variant="primary" type="submit">
+      <Button id="formsubbutton" variant="primary" type="submit">
         Confirm
       </Button>
     </Form>
