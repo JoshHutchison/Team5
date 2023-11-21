@@ -1,23 +1,26 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Main from './components/Main'
-import Waitlist from './components/Waitlist'
-
+import DataContext from './Context'
 
 
 
 function App() {
-  
+
+  const [ticketInfo, setTicketInfo] = useState({
+    first: '',
+    last: '',
+    topic: ''
+  })
 
   return (
     <>
 
-  
-        {/* <Main></Main> */}
-        <Waitlist />
-
+      <DataContext.Provider value={{ ticketInfo, setTicketInfo }}>
+        <Main></Main>
+      </DataContext.Provider>
     </>
   )
 }

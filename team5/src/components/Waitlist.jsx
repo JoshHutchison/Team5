@@ -1,31 +1,33 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { Link } from 'react-router-dom'
+import DataContext from '../Context'
 
 export default function Waitlist() {
-    //this entire block won't be necessary after I get the props object
-    const fakeProps = {
-        student: 'Jenny Smith',
-        topic: 'Django db debugging'
-    }
 
-    fakeProps.completed = false
-    fakeProps.currentUser = true
+    const { ticketInfo, setTicketInfo } = useContext(DataContext)
+
+    ticketInfo.completed = false
+    ticketInfo.currentUser = true
 
     const fakeData = [
         {
-            student: 'Mario',
+            first: 'Mario',
+            last: 'Mario',
             topic: 'React component connections',
             completed: false,
             currentUser: false
         },
         {
-            student: 'Luigi',
+            first: 'Luigi',
+            last: 'Mario',
             topic: 'Wireframing feedback',
             completed: false,
             currentUser: false
         },
         {
-            student: 'Peach',
-            topic: "addl. questions from today's lesson",
+            first: 'Peach',
+            last: 'Toadstool',
+            topic: "addl. questions",
             completed: false,
             currentUser: false
         }
@@ -34,8 +36,11 @@ export default function Waitlist() {
     const [queueItems, setQueueItems] = useState(fakeData)
 
     useEffect(() => {
-        const withUser = [...queueItems, fakeProps]
-        setQueueItems(withUser)
+        if (ticketInfo.first !== '') {
+            const withUser = [...queueItems, ticketInfo]
+            setQueueItems(withUser)
+        }
+
         // setTimeout(
         //   () => handleCompletion(withUser), 2000
         // )
@@ -60,13 +65,18 @@ export default function Waitlist() {
                 key={`queueItem_${index}`}
                 style={item.currentUser ? { color: 'green' } : { color: 'black' }}
             >
-                <p >{index + 1}. {item.student} - {item.topic}</p>
+                <p >{index + 1}. {item.first} {item.last} - {item.topic}</p>
                 <hr />
             </div>
         )
 
     const cancel = () => {
         setQueueItems(queueItems.slice(0, queueItems.length - 1))
+        setTicketInfo({
+            first: '',
+            last: '',
+            topic: ''
+        })
     }
     //ok, now you can keep clicking and just delete the entire array, but just click once. If this was real it would have a backend and this would be attached to a unique id, but this will do for demoing how it's supposed to work
 
@@ -82,7 +92,7 @@ export default function Waitlist() {
                 flexDirection: 'column'
             }}
         >
-            <h2 style={{fontWeight: '700'}}>Full Waitlist</h2>
+            <h2 style={{ fontWeight: '700' }}>Full Waitlist</h2>
             <p style={{
                 display: 'flex'
             }}><span style={{
@@ -107,6 +117,16 @@ export default function Waitlist() {
                     color: 'white'
                 }}
             >Cancel Ticket</button>
+            <Link to='../'
+                className='btn'
+                style={{
+                    border: '1px solid black',
+                    borderRadius: '6px',
+                    backgroundColor: 'rgb(98, 98, 98)',
+                    color: 'white',
+                    padding: '10px 40px 10px 40px',
+                    marginTop: '25px'
+                }}>Home</Link>
         </div>
     )
 }
