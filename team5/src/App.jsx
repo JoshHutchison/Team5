@@ -12,6 +12,7 @@ import Profile from './components/Login/Profile'
 
 function App() {
 
+  
   const [ticketInfo, setTicketInfo] = useState({
     first: '',
     last: '',
@@ -20,10 +21,9 @@ function App() {
 
   return (
     <>
-  <Profile/>
-  <Authentication/>
+  
       <DataContext.Provider value={{ ticketInfo, setTicketInfo }}>
-        <Main></Main>
+        <Main/>
       </DataContext.Provider>
     </>
   )
