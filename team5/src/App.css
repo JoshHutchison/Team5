@@ -44,7 +44,6 @@
   
 }
 
-
 /* header.css */
 .header {
   /* display:flex;
@@ -89,7 +88,7 @@
   height: 20px;
   border-radius: 5px;
   background-color: white;
-  color: green;
+  color: rgb(11, 181, 11);
   padding-left:2px;
 }
 
