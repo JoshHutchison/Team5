@@ -2,7 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FormText from 'react-bootstrap/esm/FormText';
 
-function AddTicket() {
+
+function AddTicket(props) {
   return (
     <Form className='add-form'>
 
