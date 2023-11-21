@@ -40,23 +40,7 @@ export default function Waitlist() {
             const withUser = [...queueItems, ticketInfo]
             setQueueItems(withUser)
         }
-
-        // setTimeout(
-        //   () => handleCompletion(withUser), 2000
-        // )
-
     }, [])
-
-    //I'm either going to use scrap this entirely because it isn't really able to demo what I want it to, or I'm going to try setInterval...
-    // function handleCompletion(withUser){
-    //   //freaking race condition?!?!?!
-    //   const tempItems = [...withUser]
-    //   tempItems[0].completed = true
-    //   console.log(tempItems)
-    //   const onlyUnfinished = tempItems.filter ((item) => item.completed === false)
-    //   console.log(onlyUnfinished)
-    //   setQueueItems(onlyUnfinished)
-    // }
 
 
     const itemCards =
@@ -107,7 +91,7 @@ export default function Waitlist() {
             <div style={{ marginTop: '40px' }}>
                 {itemCards}
             </div>
-            <button
+            { ticketInfo.first !== '' ? <button
                 onClick={cancel}
                 style={{
                     marginTop: '30px',
@@ -116,7 +100,18 @@ export default function Waitlist() {
                     backgroundColor: '#dc4141',
                     color: 'white'
                 }}
-            >Cancel Ticket</button>
+            >Cancel Ticket</button> : <Link 
+            to='../addticket'
+            style={{
+                marginTop: '30px',
+                padding: '10px 40px 10px 40px',
+                border: '1px solid black',
+                borderRadius: '6px',
+                backgroundColor: 'rgb(151, 151, 151',
+                color: 'white'
+            }}
+            className='btn'
+            >Add Ticket</Link>}
             <Link to='../'
                 className='btn'
                 style={{
