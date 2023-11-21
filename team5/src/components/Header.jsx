@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header>
+    <header className="headerh1">
       <h1>Mike Wazowski - Office Hours
-        Live Wait Time: Under 20 minutes
+        
       </h1>
       <div className='wait-class'>
       <button className='live-btn'>Live</button>

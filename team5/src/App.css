@@ -1,3 +1,32 @@
+/* Home */
+.Home{
+  height:932px;
+  width:430px;
+}
+
+.calendar-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom:20px
+}
+
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 50px;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top:5px;
+}
+
 /* Add Ticket */
 .add-form {
   display: flex;
@@ -10,6 +39,7 @@
   width:98vw;
   height: 60vh;
   margin-left: 4px;
+  margin-top: 150px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   
 }
@@ -17,19 +47,28 @@
 
 /* header.css */
 .header {
-  position: fixed;
+  /* display:flex;
+  align-content:center;
+  justify-content:center;
+  position: fixed; */
   top: 0;
   width: 100%;
   text-align: center;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   padding: 20px;
+  
 }
 
-.header h1 {
+.headerh1 {
+  display:flex;
+  align-content:center;
+  justify-content:center;
+  flex-direction:column;
   font-size: 24px;
   font-weight: bold;
-  margin: 0;
+  margin-left:20px
+  
 }
 .wait-class{
   display:flex;
@@ -69,6 +108,7 @@
 
 .wait-time{
   color: black;
+  
 }
 /* end of header.css */
 
