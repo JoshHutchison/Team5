@@ -6,7 +6,6 @@ import Header from './Header'
 import Waitlist from './Waitlist'
 
 
-
 const Main = () => {
 
     const [userData, setUserData] = useState(null)

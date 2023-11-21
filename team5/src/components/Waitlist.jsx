@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import DataContext from '../Context'
+import Header from './Header'
 
 export default function Waitlist() {
 
@@ -68,12 +69,16 @@ export default function Waitlist() {
     //irl there would be some math estimate to calculate this, maybe based on average amount of time, maybe based on TA input after seeing the ticket, and a way for the TA to update the time estimate for the current issue they're working on. For now, hard coded proof of concept.
 
     return (
+        <>        
+
+        <Header/>
         <div className='waitlistContainer'
             style={{
                 padding: '18px',
                 fontWeight: '600',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                
             }}
         >
             <h2 style={{ fontWeight: '700' }}>Full Waitlist</h2>
@@ -123,5 +128,6 @@ export default function Waitlist() {
                     marginTop: '25px'
                 }}>Home</Link>
         </div>
+        </>
     )
 }
